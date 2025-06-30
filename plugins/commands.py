@@ -16,6 +16,12 @@ async def start_cmd(client, message):
             text.LOG.format(message.from_user.mention, message.from_user.id)
         )
     if IS_FSUB and not await get_fsub(client, message): return
+    m=await message.reply_text("👀")
+    await asyncio.sleep(0.4)
+    await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ...</i></b>")
+    await asyncio.sleep(0.4)
+    await asyncio.sleep(0.4)
+    await m.delete()
     await message.reply_text(
         text.START.format(message.from_user.mention),
         disable_web_page_preview=True,
