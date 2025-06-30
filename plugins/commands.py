@@ -21,8 +21,8 @@ async def start_cmd(client, message):
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f"https://telegram.me/QuickAcceptBot?startgroup=true&admin=invite_users")],
-            [InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about'),
-             InlineKeyboardButton('ʜᴇʟᴘ', callback_data='help')],
+            [InlineKeyboardButton('ℹ️ ᴀʙᴏᴜᴛ', callback_data='about'),
+             InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help')],
             [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆', url=f"https://telegram.me/QuickAcceptBot?startchannel=true&admin=invite_users")]
             ])
         )
