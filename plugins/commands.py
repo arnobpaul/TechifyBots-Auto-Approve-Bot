@@ -20,8 +20,8 @@ async def start_cmd(client, message):
     await asyncio.sleep(0.4)
     await m.edit_text("<b><i>ꜱᴛᴀʀᴛɪɴɢ...</i></b>")
     await asyncio.sleep(0.4)
-    await asyncio.sleep(0.4)
     await m.delete()
+    await asyncio.sleep(0.4)
     await message.reply_text(
         text.START.format(message.from_user.mention),
         disable_web_page_preview=True,
