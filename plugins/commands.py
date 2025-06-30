@@ -37,7 +37,7 @@ async def total_users(client, message):
         await asyncio.sleep(30)
         await r.delete()
 
-@Client.on_message(filters.command('accept') & filters.private)
+@Client.on_message(filters.command('acceptall') & filters.private)
 async def accept(client, message):
     show = await message.reply("**Please Wait.....**")
     user_data = await tb.get_session(message.from_user.id)
