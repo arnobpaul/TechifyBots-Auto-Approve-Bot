@@ -4,7 +4,7 @@ from Script import text
 from config import ADMIN
 
 @Client.on_callback_query()
-async def callback_query_handler(client, query: CallbackQuery):
+async def callback_query_handler(bot: Client, message: Message, query: CallbackQuery):
     if query.data == "start":
         tb = await bot.get_me()
         await query.message.edit_text(
