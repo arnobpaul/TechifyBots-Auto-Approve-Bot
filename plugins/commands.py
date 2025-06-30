@@ -8,8 +8,7 @@ from .db import tb
 from .fsub import get_fsub
 
 @Client.on_message(filters.command("start"))
-async def start_cmd(bot: Client, message: Message):
-    tb = await bot.get_me()
+async def start_cmd(client, message):
     if await tb.get_user(message.from_user.id) is None:
         await tb.add_user(message.from_user.id, message.from_user.first_name)
         await client.send_message(
@@ -27,10 +26,10 @@ async def start_cmd(bot: Client, message: Message):
         text.START.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f"https://telegram.me/{tb.username}?startgroup=join_otherbots&admin=post_messages+edit_messages+delete_messages+restrict_members+invite_users+pin_messages+promote_members+manage_video_chats+manage_chat")],
+            [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘs ⇆', url=f"https://telegram.me/Anjakakallaleech_bot?startgroup=join_otherbots&admin=post_messages+edit_messages+delete_messages+restrict_members+invite_users+pin_messages+promote_members+manage_video_chats+manage_chat")],
             [InlineKeyboardButton('ℹ️ ᴀʙᴏᴜᴛ', callback_data='about'),
              InlineKeyboardButton('🛠️ ʜᴇʟᴘ', callback_data='help')],
-            [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆', url=f"https://telegram.me/{tb.username}?startchannel=join_otherbots&admin=post_messages+edit_messages+delete_messages+restrict_members+invite_users+pin_messages+promote_members+manage_video_chats+manage_chat")]
+            [InlineKeyboardButton('⇆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ⇆', url=f"https://telegram.me/Anjakakallaleech_bot?startchannel=join_otherbots&admin=post_messages+edit_messages+delete_messages+restrict_members+invite_users+pin_messages+promote_members+manage_video_chats+manage_chat")]
             ])
         )
 
