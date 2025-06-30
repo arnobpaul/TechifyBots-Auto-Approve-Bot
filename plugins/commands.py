@@ -85,7 +85,7 @@ async def approve_new(client, m):
         try:
             await client.send_message(
                 m.from_user.id,
-                f"Hey! 👋{m.from_user.mention},\nYour Request Approved ✅,\n\nWelcome to {m.chat.title} 🎉."
+                f"Hey! 👋{m.from_user.mention},\nYour Request Approved ✅,\n\nWelcome to - <b>{m.chat.title}</b>! 🎉."
             )
         except:
             pass
