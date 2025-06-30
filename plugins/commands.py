@@ -8,7 +8,7 @@ from .db import tb
 from .fsub import get_fsub
 
 @Client.on_message(filters.command("start"))
-async def start_cmd(client, message):
+async def start_cmd(bot: Client, message: Message):
     tb = await bot.get_me()
     if await tb.get_user(message.from_user.id) is None:
         await tb.add_user(message.from_user.id, message.from_user.first_name)
